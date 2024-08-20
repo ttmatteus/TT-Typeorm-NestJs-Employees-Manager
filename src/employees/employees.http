@@ -1,0 +1,30 @@
+### get employee
+GET http://localhost:3000/employees/
+
+### create employee
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+    "name": "Sr. Joao",
+    "managerId": 2,
+    "contactInfo": { "email": "joao@acomer.com", "phone": "+5511991234567"}
+}
+
+### update employee
+PATCH http://localhost:3000/employees/3
+Content-Type: application/json
+
+{
+    "name": "Changed Joao",
+    "managerId": 1,
+    "contactInfo": { "email": "changed.joao@acomer.com", "phone": "+5511991234568"}
+}
+
+### assign manager
+PATCH http://localhost:3000/employees/3/assign-manager
+Content-Type: application/json
+
+{
+    "managerId": 2
+}
